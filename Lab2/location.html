@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My My Location Lab2</title>
+</head>
+<body>
+
+<h1>Find My Location in USA</h1>
+<p>Type in an address, pick a benchmark, and click submit!</p>
+
+Address: <input type="text" id="addressInput" size="50">
+<br><br>
+
+Benchmark: 
+<select id="benchmarkSelect">
+  <option>loading...</option>
+</select>
+<br><br>
+
+<button onclick="getLocation()">Submit</button>
+<button onclick="clearStuff()">Clear</button>
+
+<p id="statusMsg"></p>
+
+<div id="resultBox">
+  <p>Matched Address: <span id="matchedAddress"></span></p>
+  <p>Latitude: <span id="latVal"></span></p>
+  <p>Longitude: <span id="lngVal"></span></p>
+</div>
+
+<br>
+
+<iframe id="mapFrame" width="600" height="400"></iframe>
+<script src="geoCoder.js"></script>
+</body>
